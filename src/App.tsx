@@ -1,5 +1,5 @@
 import "./App.css";
-import DasgBoard from "./pages/DashBoard";
+import DasgBoard from "./pages/MainPage";
 function App() {
   return (
     <div className="App">
