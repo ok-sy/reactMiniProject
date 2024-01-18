@@ -10,18 +10,16 @@ import { Box } from "@mui/material";
 export default function Tetris() {
   return (
     <Box sx={StyledTetrisWrapper}>
-      <Box sx={StyledTetris} >
-        <Stage stage={createStage()}
-       
-        />
-        {/* <aside>
+      <Box sx={StyledTetris}>
+        <Stage stage={createStage()} />
+        <aside>
           <div>
-            <Display text={"Score"}></Display>
+            {/* <Display text={"Score"}></Display>
             <Display text={"Rows"}></Display>
-            <Display text={"Level"}></Display>
+            <Display text={"Level"}></Display> */}
           </div>
           <StartButton />
-        </aside> */}
+        </aside>
       </Box>
     </Box>
   );

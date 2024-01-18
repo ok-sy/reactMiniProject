@@ -12,7 +12,7 @@ type Props = {
   type: TetrominoType;
 };
 const Cell: React.FC<Props> = ({ type }) => {
-  return <Box sx={rootSx(TEST_DATE)}>cell</Box>;
+  return <Box sx={rootSx(TEST_DATE)}></Box>;
 };
 
 export default Cell;
