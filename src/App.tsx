@@ -1,9 +1,9 @@
 import "./App.css";
-import DasgBoard from "./pages/MainPage";
+import MainPage from "./pages/MainPage";
 function App() {
   return (
     <div className="App">
-      <DasgBoard />
+      <MainPage />
     </div>
   );
 }

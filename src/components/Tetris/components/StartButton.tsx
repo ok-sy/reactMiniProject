@@ -5,6 +5,6 @@ type StartButtonProps = {
 };
 
 const StartButton: React.FC<StartButtonProps> = ({ callBack }) => (
-  <div>StartGame</div>
+  <button>StartGame</button>
 );
 export default StartButton;
