@@ -1,5 +1,5 @@
 import { SxProps } from "@mui/material/styles";
-import { TETROMINOS } from "../tetrominos";
+import { TETROMINOS } from "../../tetrominos";
 
 type TetrominoType = "I" | "J" | "L" | "O" | "S" | "T" | "Z" | 0;
 

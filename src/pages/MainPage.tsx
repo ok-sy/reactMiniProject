@@ -1,4 +1,4 @@
-import Tetris from "../components/Tetris";
+import Tetris from "../components/Tetris/components";
 import React from "react";
 import { rootSx } from "./style";
 import { Box } from "@mui/material";
@@ -27,7 +27,6 @@ export default function MainPage() {
       <Box className="footer">
         <p>&copy; 2024 My Tetris Game. All rights reserved.</p>
       </Box>
-      
     </Box>
   );
 }
