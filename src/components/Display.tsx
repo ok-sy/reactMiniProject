@@ -6,7 +6,7 @@ type DisplayProps = {
   gameOver: string;
   text: string;
 };
-const Display: React.FC<DisplayProps> = ({ gameOver, text }) => (
-  <Box sx={StyledDisplay({ gameOver })}>{text}</Box>
-);
-export default Display;
+export default function Display(props: DisplayProps) {
+  const { gameOver, text } = props;
+  return <Box sx={StyledDisplay({ gameOver })}>{text}</Box>;
+}

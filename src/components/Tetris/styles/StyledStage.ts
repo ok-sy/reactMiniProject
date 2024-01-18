@@ -11,6 +11,6 @@ export const StyledStage = ({ width, height }: Props): SxProps => ({
   gridGap: "1px",
   border: "2px solid #333",
   width: "100%",
-  maxWidth: "25vw",
+  // maxWidth: "25vw",
   background: "#111",
 });
