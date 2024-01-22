@@ -1,19 +1,13 @@
 import { SxProps } from "@mui/material/styles";
-import { TETROMINOS } from "../../tetrominos";
-
-type TetrominoType = "I" | "J" | "L" | "O" | "S" | "T" | "Z" | 0;
+import { TETROMINOS, TetrominoType } from "../../tetrominos";
 
 export type RootSxProps = {
   type: TetrominoType;
 };
+
 export const rootSx = ({ type }: RootSxProps): SxProps => ({
   width: "auto",
-  body: {
-    margin: 0,
-  },
-  font: {
-    fontFamily: "Pixel",
-  },
+  height: 30,
   background: `rgba(${TETROMINOS[type].color}, 0.8)`,
   color: `rgba(${TETROMINOS[type].color})`,
   border: type === 0 ? "0px solid" : "4px solid",

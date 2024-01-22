@@ -1,36 +1,31 @@
 import React from "react";
-import { createStage } from "../../gameHelper";
+import createStage from "../../gameHelper";
 import Cell from "./Cell";
-import { Box } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import { StyledStage } from "../styles/StyledStage";
+import { TetrominoType } from "../../tetrominos";
+import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 
 type StageProps = {
-  stage: ReturnType<typeof createStage>;
+  stage: TetrominoType[][][];
 };
-
-const Stage: React.FC<StageProps> = ({ stage }) => (
-  <Box
-    sx={
-      (StyledStage({ width: stage[0].length, height: stage.length }),
-      {
-        display: "flex",
-        gridTemplateRows: `repeat(${stage.length}, calc(25vw / ${stage[0].length}))`,
-        gridTemplateColumns: `repeat(${stage[0].length}, 1fr)`,
-        gridGap: "1px",
-        border: "2px solid #333",
-        width: "100%",
-        maxWidth: "25vw",
-        background: "#111",
-      })
-    }
-  >
-    {stage.map((row, y) => (
-      <Box key={y}>
-        {row.map((cell, x) => (
-          <Cell key={x} type={cell[0]} />
-        ))}
-      </Box>
-    ))}
-  </Box>
-);
-export default Stage;
+export default function Stage({ stage }: StageProps) {
+  console.log("길이가 몇나오냐????" + stage[0].length);
+  return (
+    <Box
+      className="Stage"
+      sx={StyledStage({ width: stage[0].length, height: stage.length })}
+    >
+      {/* `stage` 배열을 반복문으로 순회하면서, 각 행을 렌더링합니다. */}
+      {stage.map((row, y) => (
+        <Box key={y}>
+          {/* `row` 배열을 반복문으로 순회하면서, 각 셀을 렌더링합니다. */}
+          {row.map((cell, x) => (
+            // <Cell key={x} type={cell[0]} />
+            <Cell key={x} type={"I"} />
+          ))}
+        </Box>
+      ))}
+    </Box>
+  );
+}
