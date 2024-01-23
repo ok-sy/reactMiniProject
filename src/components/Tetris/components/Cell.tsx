@@ -1,11 +1,10 @@
-import React from "react";
 import { Box } from "@mui/material";
-import { RootSxProps, rootSx } from "../styles/StyledCell";
-import { TETROMINOS, randomTetromino, TetrominoType } from "../../tetrominos";
+import { TetrominoType } from "../../tetrominos";
+import { rootSx } from "../styles/StyledCell";
 type props = {
   type: TetrominoType;
 };
 
 export default function Cell(props: props) {
-  return <Box sx={rootSx(props)}></Box>;
+  return <Box className="Cell" sx={( rootSx(props))}></Box>;
 }

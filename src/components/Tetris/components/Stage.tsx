@@ -10,7 +10,6 @@ type StageProps = {
   stage: TetrominoType[][][];
 };
 export default function Stage({ stage }: StageProps) {
-  console.log("길이가 몇나오냐????" + stage[0].length);
   return (
     <Box
       className="Stage"
@@ -18,11 +17,15 @@ export default function Stage({ stage }: StageProps) {
     >
       {/* `stage` 배열을 반복문으로 순회하면서, 각 행을 렌더링합니다. */}
       {stage.map((row, y) => (
-        <Box key={y}>
+        <Box
+          key={y}
+          className="row"
+          sx={{ display: "grid", gridAutoFlow: "column" }}
+        >
           {/* `row` 배열을 반복문으로 순회하면서, 각 셀을 렌더링합니다. */}
           {row.map((cell, x) => (
             // <Cell key={x} type={cell[0]} />
-            <Cell key={x} type={"I"} />
+            <Cell key={x} type={"Z"} />
           ))}
         </Box>
       ))}

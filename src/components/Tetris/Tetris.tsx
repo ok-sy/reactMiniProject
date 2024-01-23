@@ -6,6 +6,7 @@ import StartButton from "./components/StartButton";
 import createStage from "../gameHelper";
 import { StyledTetrisWrapper, StyledTetris } from "./styles/StyledTetris";
 import { Box } from "@mui/material";
+import TestGrid from "./components/TestGrid";
 
 export default function Tetris() {
   return (
