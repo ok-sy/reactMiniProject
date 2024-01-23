@@ -5,7 +5,6 @@ export const StyledTetrisWrapper: SxProps = {
   height: "100vh",
   background: "#efefef",
   backgroundSize: "cover",
-  // display: "flex",
   overflow: "hidden",
 };
 
@@ -16,7 +15,6 @@ export const StyledTetris: SxProps = {
   m: "0 auto",
   maxWidth: "900px",
   justifyContent: "center",
-  // width: "100%",
 
   aside: {
     width: "100%",

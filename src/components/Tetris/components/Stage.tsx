@@ -25,7 +25,7 @@ export default function Stage({ stage }: StageProps) {
           {/* `row` 배열을 반복문으로 순회하면서, 각 셀을 렌더링합니다. */}
           {row.map((cell, x) => (
             // <Cell key={x} type={cell[0]} />
-            <Cell key={x} type={"Z"} />
+            <Cell key={x} type={0} />
           ))}
         </Box>
       ))}
