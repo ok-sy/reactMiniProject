@@ -1,12 +1,10 @@
-import React from "react";
 //component
-import Stage from "./components/Stage";
-import Display from "../Display";
-import StartButton from "./components/StartButton";
-import createStage from "../gameHelper";
-import { StyledTetrisWrapper, StyledTetris } from "./styles/StyledTetris";
 import { Box } from "@mui/material";
-import TestGrid from "./components/TestGrid";
+import Display from "../Display";
+import createStage from "../gameHelper";
+import Stage from "./components/Stage";
+import StartButton from "./components/StartButton";
+import { StyledTetris, StyledTetrisWrapper } from "./styles/StyledTetris";
 
 export default function Tetris() {
   return (

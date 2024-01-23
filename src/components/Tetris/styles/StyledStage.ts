@@ -12,6 +12,7 @@ export const StyledStage = ({ width, height }: Props): SxProps => ({
   // gridTemplateRows: `repeat(${height}, calc(25vw / ${width}))`,
   // gridTemplateColumns: `repeat(${width}, 1fr)`,
   gridGap: "1px",
+  
   // gridAutoFlow: "column",
   border: "2px solid red",
   width: "100%",

@@ -15,6 +15,7 @@ export const StyledTetris: SxProps = {
   p: "40px",
   m: "0 auto",
   maxWidth: "900px",
+  justifyContent: "center",
   // width: "100%",
 
   aside: {
