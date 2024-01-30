@@ -12,13 +12,14 @@ export const rootSx: SxProps = {
   "& .header": {
     // position: "fixed",
     width: "100%",
-    height: "20vh",
+    // height: "20vh",
+    
     backgroundColor: "rgba(51, 51, 51, 0.2)3",
   },
   "& .footer": {
     // position: "fixed",
     bottom: 0,
-    width: "100%",
+    // width: "100%",
     height: "50px",
     backgroundColor: "#efefef",
     padding: "10px",
