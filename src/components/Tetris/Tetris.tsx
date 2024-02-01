@@ -1,5 +1,5 @@
 //component
-import { Box, Button, } from "@mui/material";
+import { Box } from "@mui/material";
 import { useState } from "react";
 import Display from "../Display";
 import createStage from "../gameHelper";
@@ -20,31 +20,30 @@ export default function Tetris() {
   const [dropTime, setDropTime] = useState(null);
   const [gameOver, setGameOver] = useState(false);
 
-
-
-  const player = usePlayer;
-  const { stage, setStage } = useStage(player)
-
+  const { player, updatePlayerPos, resetPlayer } = usePlayer()
+  // const { stage, setStage } = useStage(player)
+  const { stage, setStage } = useStage(player, resetPlayer)
   console.log('re-render')
 
   const movePlayer = (dir: number) => {
-
+    updatePlayerPos({ x: dir, y: 1, collided: false })
   }
 
   const startGame = () => {
     //reset eventhing
     setStage(createStage)
-    // resetPlayer()
-   }
-
-  const drop = () => { 
-    // updatePlayerPos({ x:0, y:1, colided: false})
+    resetPlayer()
+    setGameOver(false)
   }
-  const dropPlayer = () => { 
+
+  const drop = () => {
+    updatePlayerPos({ x: 0, y: 1, collided: false })
+  }
+  const dropPlayer = () => {
     drop()
   }
   const move = (key: string) => {
-    
+
     console.log(key)
     if (!gameOver) {
       if (key === "ArrowLeft") {
@@ -54,32 +53,33 @@ export default function Tetris() {
       } else if (key === "ArrowDown") {
         dropPlayer();
       }
-        
+
     }
   }
-  
+
 
   return (
     <Box sx={StyledTetrisWrapper}  >
-      
+
       <Box className="StyledTetris" sx={StyledTetris} tabIndex={0} onKeyDown={e => {
         move(e.key)
       }}  >
         <Stage stage={stage} />
         <aside>
-          { gameOver ? (
-            <Display gameOver={"gameOver"} text="Game Over"/>
+          {gameOver ? (
+            <Display gameOver={"gameOver"} text="Game Over" />
           ) : (
-          <div>
-            <Display gameOver={""} text={"Score"}></Display>
-            <Display gameOver={""} text={"Rows"}></Display>
-            <Display gameOver={""} text={"Level"}></Display>
-          </div>
-              ) }
-          <StartButton />
-          
+            <div>
+              <Display gameOver={""} text={"Score"}></Display>
+              <Display gameOver={""} text={"Rows"}></Display>
+              <Display gameOver={""} text={"Level"}></Display>
+            </div>
+          )}
+          {/* <StartButton callBack={startGame} /> */}
+          <StartButton callBack={startGame} />
+
         </aside>
-        
+
       </Box>
     </Box>
   );

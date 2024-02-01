@@ -59,10 +59,13 @@ export const TETROMINOS = {
   },
 };
 
-export const randomTetromino = () => {
-  const tetrominos = "ITLOSTZ";
+export function  randomTetromino() {
+  
+  const tetrominos: TetrominoType[] = ["I", "J", "L", "O", "S", "T", "Z"];
+
   const randTetromino = tetrominos[
     Math.floor(Math.random() * tetrominos.length)
-  ] as keyof typeof TETROMINOS;
+  ] 
   return TETROMINOS[randTetromino];
+   ;
 };
