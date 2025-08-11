@@ -1,11 +1,11 @@
 import { SxProps } from "@mui/material/styles";
 
 export const StyledTetrisWrapper: SxProps = {
-  width: "100vw",
-  // height: "100vh",
+  width: "50vw",
+  minHeight: "800",
   background: "#efefef",
   backgroundSize: "cover",
-  overflow: "hidden",
+  // overflow: "hidden",
 
 };
 
@@ -23,6 +23,6 @@ export const StyledTetris: SxProps = {
     display: "block",
     padding: "0 20px",
   },
-  
-    
+
+
 };
