@@ -26,7 +26,7 @@ export default function Tetris() {
     resetPlayer
   );
 
-  const [dropTime, setDropTime] = useState<number | null>(null);
+  const [dropTime, setDropTime] = useState<number | null>(1000);
   const [gameOver, setGameOver] = useState(false);
 
   const movePlayer = useCallback((dir: number) => {
