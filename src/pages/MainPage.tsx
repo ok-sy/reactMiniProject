@@ -10,18 +10,20 @@ import SportsEsportsIcon from "@mui/icons-material/SportsEsports.js";
 import AssessmentIcon from "@mui/icons-material/Assessment.js";
 import InfoIcon from "@mui/icons-material/Info.js";
 import Tetris from "../components/Tetris/Tetris";
+import DashBoardPage from "./DashBoardPage";
+import AboutPage from "./AboutPage";
 
 const drawerWidth = 260;
 
-type ViewKey = 'tetris' | 'dashboard' | 'about';
+type ViewKey = 'dashboard' | 'tetris' | 'about';
 
 export default function MainPage() {
   const [open, setOpen] = useState(true);
-  const [view, setView] = useState<ViewKey>('tetris');
+  const [view, setView] = useState<ViewKey>('dashboard');
 
   const menus = useMemo(() => ([
-    { key: 'tetris' as const, label: 'Tetris', icon: <SportsEsportsIcon /> },
     { key: 'dashboard' as const, label: 'Dashboard', icon: <AssessmentIcon /> },
+    { key: 'tetris' as const, label: 'Tetris', icon: <SportsEsportsIcon /> },
     { key: 'about' as const, label: 'About', icon: <InfoIcon /> },
   ]), []);
 
@@ -104,15 +106,12 @@ export default function MainPage() {
           {view === 'tetris' && <Tetris />}
 
           {view === 'dashboard' && (
-            <Box sx={{ color: 'text.secondary' }}>
-              대시보드 자리(추후 그래프/표 삽입)
-            </Box>
+            <DashBoardPage />
           )}
 
           {view === 'about' && (
-            <Box sx={{ color: 'text.secondary' }}>
-              Mini Projects 소개/버전/링크 등
-            </Box>
+            <AboutPage />
+
           )}
         </Box>
       </Box>
