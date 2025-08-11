@@ -11,13 +11,10 @@ export default function DashBoardPage() {
             <Typography variant="body1" color="text.secondary">
                 This project showcases various mini applications built with React and Material-UI.
             </Typography>
-            <Typography variant="body2" color="text.secondary" mt={1}>
+            <Typography variant="body2" color="text.secondary" mt={1} mb={2}>
                 Version: 1.0.0
             </Typography>
-
-            <Typography variant="body2" color="text.secondary" mt={2}>
-                <GitHubCalendar username="ok-sy" />
-            </Typography>
+            <GitHubCalendar username="ok-sy" />
         </Box>
     );
 }

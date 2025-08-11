@@ -15,7 +15,7 @@ import AboutPage from "./AboutPage";
 
 const drawerWidth = 260;
 
-type ViewKey = 'dashboard' | 'tetris' | 'about';
+type ViewKey = 'dashboard' | 'tetris' | 'about' | 'ADD1' | 'ADD2' | 'ADD3' | 'ADD4' | 'ADD5' | 'ADD6';
 
 export default function MainPage() {
   const [open, setOpen] = useState(true);
@@ -25,6 +25,12 @@ export default function MainPage() {
     { key: 'dashboard' as const, label: 'Dashboard', icon: <AssessmentIcon /> },
     { key: 'tetris' as const, label: 'Tetris', icon: <SportsEsportsIcon /> },
     { key: 'about' as const, label: 'About', icon: <InfoIcon /> },
+    { key: 'ADD1' as const, label: 'ADD1', icon: <InfoIcon /> },
+    { key: 'ADD2' as const, label: 'ADD2', icon: <InfoIcon /> },
+    { key: 'ADD3' as const, label: 'ADD3', icon: <InfoIcon /> },
+    { key: 'ADD4' as const, label: 'ADD4', icon: <InfoIcon /> },
+    { key: 'ADD5' as const, label: 'ADD5', icon: <InfoIcon /> },
+    { key: 'ADD6' as const, label: 'ADD6', icon: <InfoIcon /> },
   ]), []);
 
   return (

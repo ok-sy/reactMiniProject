@@ -1,15 +1,17 @@
-import { SxProps } from "@mui/material";
+// StyledStage.ts
+type Size = { width: number; height: number; cell?: number; gap?: number };
 
-type Size = { width: number; height: number };
-export const StyledStage = ({ width, height }: Size) => ({
+export const StyledStage = ({ width, height, cell = 32, gap = 2 }: Size) => ({
+  // 셀 크기/간격을 고정 픽셀로 만들어 소수점 제거
   display: 'grid',
-  gridTemplateColumns: `repeat(${width}, 1fr)`,
-  gridTemplateRows: `repeat(${height}, 1fr)`,
-  gap: 1,                 // 간격이 너무 크면 셀이 얇아보일 수 있음
-  width: 480,             // 원하는 보드 폭
-  height: 800,            // 원하는 보드 높이(20행이면 40px/칸)
+  gridTemplateColumns: `repeat(${width}, ${cell}px)`,
+  gridTemplateRows: `repeat(${height}, ${cell}px)`,
+  gap: `${gap}px`,
+  // 전체 크기를 "정수"로 정확히 계산
+  width: `${width * cell + (width - 1) * gap}px`,
+  height: `${height * cell + (height - 1) * gap}px`,
   background: '#111',
-  padding: 4,
-  boxSizing: 'border-box',
-  overflow: 'hidden',
+  // 끝 가장자리 한 줄 착시 방지
+  padding: 0,
+  boxSizing: 'content-box',
 });
