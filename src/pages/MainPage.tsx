@@ -1,5 +1,5 @@
 'use client';
-import { useMemo, useState } from "react";
+import { useMemo, useState } from "react"
 import {
   AppBar, Box, CssBaseline, Divider, Drawer, IconButton, List,
   ListItem, ListItemButton, ListItemIcon, ListItemText, Toolbar, Typography,
@@ -15,7 +15,7 @@ import AboutPage from "./AboutPage";
 
 const drawerWidth = 260;
 
-type ViewKey = 'dashboard' | 'tetris' | 'about' | 'ADD1' | 'ADD2' | 'ADD3' | 'ADD4' | 'ADD5' | 'ADD6';
+type ViewKey = 'dashboard' | 'tetris' | 'about' | 'Function1' | 'ADD2' | 'ADD3' | 'ADD4' | 'ADD5' | 'ADD6';
 
 export default function MainPage() {
   const [open, setOpen] = useState(true);
@@ -25,7 +25,7 @@ export default function MainPage() {
     { key: 'dashboard' as const, label: 'Dashboard', icon: <AssessmentIcon /> },
     { key: 'tetris' as const, label: 'Tetris', icon: <SportsEsportsIcon /> },
     { key: 'about' as const, label: 'About', icon: <InfoIcon /> },
-    { key: 'ADD1' as const, label: 'ADD1', icon: <InfoIcon /> },
+    { key: 'Function1' as const, label: 'Function1', icon: <InfoIcon /> },
     { key: 'ADD2' as const, label: 'ADD2', icon: <InfoIcon /> },
     { key: 'ADD3' as const, label: 'ADD3', icon: <InfoIcon /> },
     { key: 'ADD4' as const, label: 'ADD4', icon: <InfoIcon /> },
@@ -116,6 +116,10 @@ export default function MainPage() {
           )}
 
           {view === 'about' && (
+            <AboutPage />
+
+          )}
+          {view === 'Function1' && (
             <AboutPage />
 
           )}
