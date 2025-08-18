@@ -14,9 +14,16 @@ import DashBoardPage from "./DashBoardPage";
 import AboutPage from "./AboutPage";
 import Todo from "./Todo";
 import TodoList from "./TodoList";
+import ChromeLikeTabs, { TabItem } from "../components/Tab/nav/ChromeLikeTabs";
 const drawerWidth = 260;
 
-type ViewKey = 'dashboard' | 'tetris' | 'about' | 'Todo' | 'Todo2' | 'ADD3' | 'ADD4' | 'ADD5' | 'ADD6';
+type ViewKey = 'dashboard' | 'tetris' | 'about' | 'Todo' | 'Todo2' | 'Tab' | 'ADD4' | 'ADD5' | 'ADD6';
+
+const items: TabItem[] = [
+  { id: '0', label: 'Tetris', content: <Tetris /> },
+  { id: '1', label: 'Dashboard', content: <DashBoardPage /> },
+  { id: '2', label: 'About', content: <AboutPage /> },
+];
 
 export default function MainPage() {
   const [open, setOpen] = useState(true);
@@ -28,7 +35,7 @@ export default function MainPage() {
     { key: 'about' as const, label: 'About', icon: <InfoIcon /> },
     { key: 'Todo' as const, label: 'Todo', icon: <InfoIcon /> },
     { key: 'Todo2' as const, label: 'Todo2', icon: <InfoIcon /> },
-    { key: 'ADD3' as const, label: 'ADD3', icon: <InfoIcon /> },
+    { key: 'Tab' as const, label: 'Tab', icon: <InfoIcon /> },
     { key: 'ADD4' as const, label: 'ADD4', icon: <InfoIcon /> },
     { key: 'ADD5' as const, label: 'ADD5', icon: <InfoIcon /> },
     { key: 'ADD6' as const, label: 'ADD6', icon: <InfoIcon /> },
@@ -126,6 +133,12 @@ export default function MainPage() {
           )}
           {view === 'Todo2' && (
             <TodoList />
+
+          )}
+          {view === 'Tab' && (
+            <Box sx={{ p: 2 }}>
+              <ChromeLikeTabs initialItems={items} initialActiveId="0" storageKey="chrome-tabs" />
+            </Box>
 
           )}
 
