@@ -1,14 +1,14 @@
 // src/components/Tetris/Tetris.tsx
 import { Box, Button } from "@mui/material";
 import { useCallback, useEffect, useState } from "react";
-import Display from "../Display";
-import createStage, { checkCollision, StageGrid } from "../gameHelper";
+import Display from "./Display";
+import createStage, { checkCollision, StageGrid } from "./gameHelper";
 import Stage from "./components/Stage";
 import StartButton from "./components/StartButton";
 import { StyledTetris, StyledTetrisWrapper } from "./styles/StyledTetris";
 import usePlayer from './hooks/usePlayer';
 import useStage from './hooks/useStage';
-import { TetrominoType } from "../tetrominos";
+import { TetrominoType } from "./tetrominos";
 
 // 간단한 useInterval
 function useInterval(callback: () => void, delay: number | null) {

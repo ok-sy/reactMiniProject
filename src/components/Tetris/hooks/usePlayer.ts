@@ -1,7 +1,7 @@
 // src/components/Tetris/hooks/usePlayer.ts
 import { useCallback, useState } from 'react';
-import { randomTetromino } from '../../tetrominos';
-import { STAGE_WIDTH } from '../../gameHelper';
+import { randomTetromino } from '../tetrominos';
+import { STAGE_WIDTH } from '../gameHelper';
 
 export default function usePlayer() {
     const [player, setPlayer] = useState(() => {

@@ -12,10 +12,11 @@ import InfoIcon from "@mui/icons-material/Info.js";
 import Tetris from "../components/Tetris/Tetris";
 import DashBoardPage from "./DashBoardPage";
 import AboutPage from "./AboutPage";
-
+import Todo from "./Todo";
+import TodoList from "./TodoList";
 const drawerWidth = 260;
 
-type ViewKey = 'dashboard' | 'tetris' | 'about' | 'Function1' | 'ADD2' | 'ADD3' | 'ADD4' | 'ADD5' | 'ADD6';
+type ViewKey = 'dashboard' | 'tetris' | 'about' | 'Todo' | 'Todo2' | 'ADD3' | 'ADD4' | 'ADD5' | 'ADD6';
 
 export default function MainPage() {
   const [open, setOpen] = useState(true);
@@ -25,8 +26,8 @@ export default function MainPage() {
     { key: 'dashboard' as const, label: 'Dashboard', icon: <AssessmentIcon /> },
     { key: 'tetris' as const, label: 'Tetris', icon: <SportsEsportsIcon /> },
     { key: 'about' as const, label: 'About', icon: <InfoIcon /> },
-    { key: 'Function1' as const, label: 'Function1', icon: <InfoIcon /> },
-    { key: 'ADD2' as const, label: 'ADD2', icon: <InfoIcon /> },
+    { key: 'Todo' as const, label: 'Todo', icon: <InfoIcon /> },
+    { key: 'Todo2' as const, label: 'Todo2', icon: <InfoIcon /> },
     { key: 'ADD3' as const, label: 'ADD3', icon: <InfoIcon /> },
     { key: 'ADD4' as const, label: 'ADD4', icon: <InfoIcon /> },
     { key: 'ADD5' as const, label: 'ADD5', icon: <InfoIcon /> },
@@ -119,10 +120,15 @@ export default function MainPage() {
             <AboutPage />
 
           )}
-          {view === 'Function1' && (
-            <AboutPage />
+          {view === 'Todo' && (
+            <Todo />
 
           )}
+          {view === 'Todo2' && (
+            <TodoList />
+
+          )}
+
         </Box>
       </Box>
     </Box>

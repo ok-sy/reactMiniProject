@@ -1,7 +1,7 @@
 import Cell from "./Cell";
 import { Box, Grid } from "@mui/material";
 import { StyledStage } from "../styles/StyledStage";
-import { TetrominoType } from "../../tetrominos";
+import { TetrominoType } from "../tetrominos";
 
 type StageProps = {
   stage: TetrominoType[][][];

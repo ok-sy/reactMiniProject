@@ -1,4 +1,4 @@
-import { TetrominoType } from "../../tetrominos";
+import { TetrominoType } from "../tetrominos";
 
 const colorMap: Record<TetrominoType, string> = {
   0: 'rgba(0,0,0,0.2)',

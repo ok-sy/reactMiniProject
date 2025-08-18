@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import { TetrominoType } from "../../tetrominos";
+import { TetrominoType } from "../tetrominos";
 import { rootSx } from "../styles/StyledCell";
 type props = {
   type: TetrominoType;

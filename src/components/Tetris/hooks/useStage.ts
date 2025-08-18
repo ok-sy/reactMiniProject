@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import createStage from '../../gameHelper';
-import { TetrominoType } from '../../tetrominos';
+import createStage from '../gameHelper';
+import { TetrominoType } from '../tetrominos';
 
 export type CellState = [TetrominoType, 'clear' | 'merged'];
 export type StageGrid = CellState[][];
