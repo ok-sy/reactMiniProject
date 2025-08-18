@@ -4,11 +4,11 @@ import {
   AppBar, Box, CssBaseline, Divider, Drawer, IconButton, List,
   ListItem, ListItemButton, ListItemIcon, ListItemText, Toolbar, Typography,
 } from "@mui/material";
-import MenuIcon from '@mui/icons-material/Menu.js';
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft.js";
-import SportsEsportsIcon from "@mui/icons-material/SportsEsports.js";
-import AssessmentIcon from "@mui/icons-material/Assessment.js";
-import InfoIcon from "@mui/icons-material/Info.js";
+import MenuIcon from '@mui/icons-material/Menu';
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
+import AssessmentIcon from "@mui/icons-material/Assessment";
+import InfoIcon from "@mui/icons-material/Info";
 import Tetris from "../components/Tetris/Tetris";
 import DashBoardPage from "./DashBoardPage";
 import AboutPage from "./AboutPage";
