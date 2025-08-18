@@ -1,8 +1,8 @@
-// src/components/nav/ChromeLikeTabsModal.tsx
+// src/components/Tab/nav/ChromeLikeTabs.tsx
 'use client';
 
 /**
- * ChromeLikeTabsModal
+ * ChromeLikeTabs
  * - 크롬 느낌의 탭 UX:
  *    1) 탭 라벨 드래그로 순서 변경
  *    2) 탭 라벨을 상단 DropZone으로 드래그&드롭 → 모달(Dialog)로 "떼어내기"
@@ -60,10 +60,10 @@ type Props = {
     storageKey?: string;     // 탭 순서 로컬 저장 키
 };
 
-export default function ChromeLikeTabsModal({
+export default function ChromeLikeTabs({
     initialItems,
     initialActiveId,
-    storageKey = 'chrome-like-tabs-modal'
+    storageKey = 'chrome-like-tabs'
 }: Props) {
     /** 1) 탭 목록 상태 (초기 순서 복원 로직 포함 가능) */
     const [items, setItems] = useState<TabItem[]>(() => {
