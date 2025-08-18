@@ -2,7 +2,7 @@ import { SxProps } from "@mui/material/styles";
 
 export const StyledTetrisWrapper: SxProps = {
   width: "50vw",
-  minHeight: "800",
+  minHeight: 800,
   background: "#efefef",
   backgroundSize: "cover",
   // overflow: "hidden",
