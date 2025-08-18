@@ -14,7 +14,7 @@ export const rootSx: SxProps = {
     width: "100%",
     // height: "20vh",
     
-    backgroundColor: "rgba(51, 51, 51, 0.2)3",
+    backgroundColor: "rgba(51, 51, 51, 0.2)",
   },
   "& .footer": {
     // position: "fixed",
