@@ -15,9 +15,10 @@ import AboutPage from "./AboutPage";
 import Todo from "./Todo";
 import TodoList from "./TodoList";
 import ChromeLikeTabs, { TabItem } from "../components/Tab/nav/ChromeLikeTabs";
+import SajuApp from "../components/Saju/SajuLanding";
 const drawerWidth = 260;
 
-type ViewKey = 'dashboard' | 'tetris' | 'about' | 'Todo' | 'Todo2' | 'Tab' | 'ADD4' | 'ADD5' | 'ADD6';
+type ViewKey = 'dashboard' | 'tetris' | 'about' | 'Todo' | 'Todo2' | 'Tab' | 'Saju' | 'ADD5' | 'ADD6';
 
 const items: TabItem[] = [
   { id: '0', label: 'Tetris', content: <Tetris /> },
@@ -36,7 +37,7 @@ export default function MainPage() {
     { key: 'Todo' as const, label: 'Todo', icon: <InfoIcon /> },
     { key: 'Todo2' as const, label: 'Todo2', icon: <InfoIcon /> },
     { key: 'Tab' as const, label: 'Tab', icon: <InfoIcon /> },
-    { key: 'ADD4' as const, label: 'ADD4', icon: <InfoIcon /> },
+    { key: 'Saju' as const, label: 'Saju', icon: <InfoIcon /> },
     { key: 'ADD5' as const, label: 'ADD5', icon: <InfoIcon /> },
     { key: 'ADD6' as const, label: 'ADD6', icon: <InfoIcon /> },
   ]), []);
@@ -141,7 +142,12 @@ export default function MainPage() {
             </Box>
 
           )}
+          {view === 'Saju' && (
+            <Box sx={{ p: 2 }}>
+              <SajuApp />
+            </Box>
 
+          )}
         </Box>
       </Box>
     </Box>
